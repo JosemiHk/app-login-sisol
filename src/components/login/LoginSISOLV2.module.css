@@ -1,0 +1,430 @@
+.loginContainer {
+  background-color: rgba(255, 254, 252, 1);
+  padding: 15px 18px 39px;
+  overflow: hidden;
+  font-family:
+    Poppins,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 991px) {
+  .loginContainer {
+    padding-left: 20px;
+  }
+}
+
+.mainContent {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 991px) {
+  .mainContent {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}
+
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 60%;
+  margin-left: 0;
+}
+
+@media (max-width: 991px) {
+  .imageColumn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.loginImage {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 20px;
+  margin: auto 0;
+  align-self: stretch;
+}
+
+@media (max-width: 991px) {
+  .loginImage {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.formColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 40%;
+  margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+  .formColumn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.formWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+}
+
+@media (max-width: 991px) {
+  .formWrapper {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.phoneHeader {
+  align-self: end;
+  display: flex;
+  align-items: stretch;
+  gap: 5px;
+  font-size: 15px;
+  color: rgba(235, 67, 53, 1);
+  font-weight: 700;
+}
+
+.phoneIcon {
+  aspect-ratio: 1.08;
+  object-fit: contain;
+  object-position: center;
+  width: 13px;
+  border-radius: 20px;
+  align-self: start;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.phoneNumber {
+  /* Phone number styling inherited from parent */
+}
+
+.tabContainer {
+  border-radius: 33px;
+  background-color: rgba(216, 226, 238, 1);
+  display: flex;
+  margin: 162px 0 0 53px;
+  padding: 10px 13px;
+  align-items: stretch;
+  gap: 40px 45px;
+  font-weight: 400;
+}
+
+@media (max-width: 991px) {
+  .tabContainer {
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+}
+
+.tab {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 8px 21px;
+  border-radius: 33px;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 991px) {
+  .tab {
+    padding: 8px 20px;
+  }
+}
+
+.activeTab {
+  background-color: rgba(26, 74, 132, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.inactiveTab {
+  color: rgba(26, 74, 132, 1);
+  background-color: transparent;
+}
+
+.registerPrompt {
+  display: flex;
+  margin-top: 19px;
+  align-items: stretch;
+  gap: 17px;
+}
+
+@media (max-width: 991px) {
+  .registerPrompt {
+    margin-left: 3px;
+  }
+}
+
+.registerText {
+  color: rgba(91, 91, 91, 1);
+  font-weight: 400;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.registerLink {
+  color: rgba(0, 163, 156, 1);
+  font-weight: 700;
+  flex-basis: auto;
+  cursor: pointer;
+}
+
+.loginForm {
+  width: 100%;
+}
+
+.fieldGroup {
+  margin-top: 25px;
+}
+
+.fieldGroup:first-child {
+  margin-top: 43px;
+}
+
+@media (max-width: 991px) {
+  .fieldGroup:first-child {
+    margin-top: 40px;
+  }
+}
+
+.fieldLabel {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 435px;
+  max-width: 100%;
+}
+
+.selectField {
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(26, 74, 132, 1);
+  width: 100%;
+  padding: 15px 27px;
+  color: rgba(86, 87, 89, 1);
+  font-weight: 400;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .selectField {
+    padding: 15px 20px;
+  }
+}
+
+.dropdownIcon {
+  position: absolute;
+  right: 27px;
+  top: 50%;
+  transform: translateY(-50%);
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 991px) {
+  .dropdownIcon {
+    right: 20px;
+  }
+}
+
+.inputField {
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(26, 74, 132, 1);
+  width: 435px;
+  max-width: 100%;
+  padding: 15px 31px;
+  color: rgba(86, 87, 89, 1);
+  font-weight: 400;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+@media (max-width: 991px) {
+  .inputField {
+    padding: 15px 20px;
+  }
+}
+
+.inputField::placeholder {
+  color: rgba(86, 87, 89, 1);
+}
+
+.passwordWrapper {
+  position: relative;
+  width: 435px;
+  max-width: 100%;
+}
+
+.passwordField {
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(26, 74, 132, 1);
+  width: 100%;
+  padding: 15px 30px;
+  color: rgba(86, 87, 89, 1);
+  font-weight: 400;
+  font-family: inherit;
+  font-size: inherit;
+  padding-right: 60px;
+}
+
+@media (max-width: 991px) {
+  .passwordField {
+    padding: 15px 20px;
+    padding-right: 50px;
+  }
+}
+
+.passwordField::placeholder {
+  color: rgba(86, 87, 89, 1);
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (max-width: 991px) {
+  .passwordToggle {
+    right: 20px;
+  }
+}
+
+.passwordIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.formOptions {
+  display: flex;
+  margin-top: 22px;
+  width: 435px;
+  max-width: 100%;
+  align-items: stretch;
+  gap: 20px;
+  font-size: 12px;
+  justify-content: space-between;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 300;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .checkboxWrapper {
+    white-space: initial;
+  }
+}
+
+.checkbox {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
+  align-self: start;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  /* Label styling inherited from parent */
+}
+
+.forgotPassword {
+  color: rgba(0, 163, 156, 1);
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.loginButton {
+  border-radius: 36px;
+  background-color: rgba(26, 74, 132, 1);
+  align-self: center;
+  margin-top: 52px;
+  width: 232px;
+  max-width: 100%;
+  padding: 13px 55px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+@media (max-width: 991px) {
+  .loginButton {
+    padding: 13px 20px;
+    margin-top: 40px;
+  }
+}
+
+.copyright {
+  color: rgba(151, 151, 151, 1);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 65px;
+  margin-left: 11px;
+}
+
+@media (max-width: 991px) {
+  .copyright {
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+}
