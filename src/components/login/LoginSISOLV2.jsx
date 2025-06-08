@@ -1,9 +1,9 @@
 
 import React, { useState } from "react";
-import styles from "/home/dasupn/Escritorio/react app/app-login-sisol/src/components/login/LoginSISOLV2.module.css";
+import styles from "./LoginSISOLV2.module.css";
 
 function LoginSISOLV2() {
-  const [activeTab, setActiveTab] = useState("login");
+  const [activeTab, setActiveTab] = useState("login");  
   const [documentType, setDocumentType] = useState("DNI");
   const [documentNumber, setDocumentNumber] = useState("");
   const [password, setPassword] = useState("");

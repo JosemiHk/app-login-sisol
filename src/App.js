@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 // Importa tu componente LoginSISOLV2
-import LoginSISOLV2 from '/home/dasupn/Escritorio/react app/app-login-sisol/src/components/login/LoginSISOLV2'; // Ajusta la ruta si es necesario, ej: './components/LoginSISOLV2';
+import LoginSISOLV2 from './components/login/LoginSISOLV2'; // Ajusta la ruta si es necesario, ej: './components/LoginSISOLV2';
 import './App.css'; // Si tienes estilos globales en App.css que quieres mantener
 
 function App() {
