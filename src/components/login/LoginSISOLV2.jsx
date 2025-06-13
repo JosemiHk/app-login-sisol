@@ -58,20 +58,21 @@ function LoginSISOLV2() {
               <span
                 className={styles.registerLink}
                 onClick={() => navigate("/register/register-step1")}
-                style={{ cursor: "pointer", color: "#1ec98b", fontWeight: 600 }}
+                style={{ cursor: "pointer", color: "rgba(0, 163, 156, 1)", fontWeight: 600 }}
               >
                 ¡Regístrate aquí!
               </span>
             </div>
 
-            <form className={styles.loginForm} onSubmit={handleLogin}>
-              <div className={styles.fieldGroup}>
+            <form className={styles.loginForm} onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+              <div className={styles.fieldGroup} style={{ width: '50%' }}>
                 <label className={styles.fieldLabel}>Tipo de documento</label>
-                <div className={styles.selectWrapper}>
+                <div className={styles.selectWrapper} style={{ width: '100%' }}>
                   <select
                     value={documentType}
                     onChange={handleDocumentTypeChange}
                     className={styles.selectField}
+                    style={{ width: '100%' }}
                   >
                     <option value="DNI">DNI</option>
                     <option value="CE">Carné de extranjería</option>
@@ -84,7 +85,7 @@ function LoginSISOLV2() {
                 </div>
               </div>
 
-              <div className={styles.fieldGroup}>
+              <div className={styles.fieldGroup} style={{ width: '50%' }}>
                 <label className={styles.fieldLabel}>Número de documento</label>
                 <input
                   type="text"
@@ -92,25 +93,25 @@ function LoginSISOLV2() {
                   onChange={(e) => setDocumentNumber(e.target.value)}
                   placeholder="Ingrese su número de documento"
                   className={styles.inputField}
-                  style={{ width: "100%" }}
+                  style={{ width: '100%' }}
                 />
               </div>
 
-              <div className={styles.fieldGroup}>
+              <div className={styles.fieldGroup} style={{ width: '50%' }}>
                 <label className={styles.fieldLabel}>Contraseña</label>
-                <div className={styles.passwordWrapper}>
+                <div className={styles.passwordWrapper} style={{ width: '100%' }}>
                   <input
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Ingrese su contraseña SISOL"
                     className={styles.inputField}
-                    style={{ width: "100%" }}
+                    style={{ width: '100%' }}
                   />
                 </div>
               </div>
 
-              <div className={styles.formOptions}>
+              <div className={styles.formOptions} style={{ width: '80%' }}>
                 <label className={styles.checkboxWrapper}>
                   <input
                     type="checkbox"
@@ -125,9 +126,11 @@ function LoginSISOLV2() {
                 </button>
               </div>
 
-              <button type="submit" className={styles.loginButton}>
-                INICIAR SESIÓN
-              </button>
+              <div style={{ display: 'flex', justifyContent: 'center', width: '80%' }}>
+                <button type="submit" className={styles.loginButton}>
+                  INICIAR SESIÓN
+                </button>
+              </div>
             </form>
 
             <div className={styles.copyright}>
