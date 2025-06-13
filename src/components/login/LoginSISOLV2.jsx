@@ -1,14 +1,25 @@
-
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./LoginSISOLV2.module.css";
 
 function LoginSISOLV2() {
-  const [activeTab, setActiveTab] = useState("login");  
   const [documentType, setDocumentType] = useState("DNI");
   const [documentNumber, setDocumentNumber] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
+  // Manejar el cambio de tipo de documento
+  const handleDocumentTypeChange = (e) => {
+    setDocumentType(e.target.value);
+    setDocumentNumber(""); // Limpiar el número de documento al cambiar tipo
+  };
+
+  // Manejar el login (puedes agregar tu lógica aquí)
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Aquí puedes usar documentType, documentNumber y password
+  };
 
   return (
     <div className={styles.loginContainer}>
@@ -33,16 +44,10 @@ function LoginSISOLV2() {
 
             <div className={styles.tabContainer}>
               <button
-                className={`${styles.tab} ${activeTab === "login" ? styles.activeTab : ""}`}
-                onClick={() => setActiveTab("login")}
+                className={`${styles.tab} ${styles.activeTab}`}
+                type="button"
               >
                 Iniciar sesión
-              </button>
-              <button
-                className={`${styles.tab} ${activeTab === "register" ? styles.inactiveTab : ""}`}
-                onClick={() => setActiveTab("register")}
-              >
-                Registrarse
               </button>
             </div>
 
@@ -50,20 +55,26 @@ function LoginSISOLV2() {
               <span className={styles.registerText}>
                 Si todavía no tienes una cuenta
               </span>
-              <span className={styles.registerLink}>¡Regístrate aquí!</span>
+              <span
+                className={styles.registerLink}
+                onClick={() => navigate("/register/register-step1")}
+                style={{ cursor: "pointer", color: "#1ec98b", fontWeight: 600 }}
+              >
+                ¡Regístrate aquí!
+              </span>
             </div>
 
-            <form className={styles.loginForm}>
+            <form className={styles.loginForm} onSubmit={handleLogin}>
               <div className={styles.fieldGroup}>
                 <label className={styles.fieldLabel}>Tipo de documento</label>
                 <div className={styles.selectWrapper}>
                   <select
                     value={documentType}
-                    onChange={(e) => setDocumentType(e.target.value)}
+                    onChange={handleDocumentTypeChange}
                     className={styles.selectField}
                   >
                     <option value="DNI">DNI</option>
-                    <option value="DNI">Carné de extranjería</option>
+                    <option value="CE">Carné de extranjería</option>
                   </select>
                   <img
                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23565759' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"
@@ -81,6 +92,7 @@ function LoginSISOLV2() {
                   onChange={(e) => setDocumentNumber(e.target.value)}
                   placeholder="Ingrese su número de documento"
                   className={styles.inputField}
+                  style={{ width: "100%" }}
                 />
               </div>
 
@@ -88,23 +100,13 @@ function LoginSISOLV2() {
                 <label className={styles.fieldLabel}>Contraseña</label>
                 <div className={styles.passwordWrapper}>
                   <input
-                    type={showPassword ? "text" : "password"}
+                    type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Ingrese su contraseña SISOL"
-                    className={styles.passwordField}
+                    className={styles.inputField}
+                    style={{ width: "100%" }}
                   />
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword(!showPassword)}
-                    className={styles.passwordToggle}
-                  >
-                    <img
-                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23565759' viewBox='0 0 24 24'%3E%3Cpath d='M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z'/%3E%3C/svg%3E"
-                      alt="Toggle password visibility"
-                      className={styles.passwordIcon}
-                    />
-                  </button>
                 </div>
               </div>
 
