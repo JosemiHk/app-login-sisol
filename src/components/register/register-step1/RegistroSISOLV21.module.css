@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.container {
+  background-color: rgba(255, 254, 252, 1);
+  display: flex;
+  padding: 15px 27px 24px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding-left: 20px;
+  }
+}
+
+.phoneHeader {
+  align-self: end;
+  display: flex;
+  align-items: stretch;
+  gap: 5px;
+  font-family:
+    "Poppins",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 15px;
+  color: rgba(235, 67, 53, 1);
+  font-weight: 700;
+}
+
+.phoneIcon {
+  aspect-ratio: 1.08;
+  object-fit: contain;
+  object-position: center;
+  width: 13px;
+  border-radius: 20px;
+  align-self: start;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.phoneNumber {
+  /* Phone number styling */
+}
+
+.mainContent {
+  display: flex;
+  margin-top: 86px;
+  width: 946px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media (max-width: 991px) {
+  .mainContent {
+    margin-top: 40px;
+  }
+}
+
+.contentWrapper {
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .contentWrapper {
+    max-width: 100%;
+  }
+}
+
+.stepContainer {
+  gap: 20px;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .stepContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 40%;
+  margin-left: 0px;
+}
+
+@media (max-width: 991px) {
+  .leftColumn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.stepsWrapper {
+  display: flex;
+  margin-top: 93px;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  font-family:
+    "Poppins",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .stepsWrapper {
+    margin-top: 40px;
+  }
+}
+
+.stepGroup {
+  align-self: start;
+  display: flex;
+  align-items: stretch;
+  gap: 25px;
+}
+
+.stepGroup:not(:first-child) {
+  margin-top: 21px;
+  gap: 23px;
+  color: rgba(26, 74, 132, 1);
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .stepItem {
+    white-space: initial;
+  }
+}
+
+.stepNumberActive {
+  background-color: rgba(26, 74, 132, 1);
+  border-color: rgba(26, 74, 132, 1);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  padding: 0 22px;
+  width: 51px;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .stepNumberActive {
+    padding: 0 20px;
+    white-space: initial;
+  }
+}
+
+.stepConnector {
+  aspect-ratio: 0.05;
+  object-fit: contain;
+  object-position: center;
+  width: 6px;
+  align-self: center;
+  margin-top: 16px;
+}
+
+.stepConnector:last-child {
+  margin-top: 17px;
+}
+
+.stepLabelActive {
+  color: rgba(26, 74, 132, 1);
+  font-weight: 500;
+  align-self: start;
+  flex-basis: auto;
+}
+
+.stepVertical {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .stepVertical {
+    white-space: initial;
+  }
+}
+
+.stepNumberInactive {
+  border-color: rgba(26, 74, 132, 1);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  padding: 15px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(26, 74, 132, 1);
+}
+
+.stepNumberInactive:last-child {
+  margin-top: 20px;
+  padding: 14px 19px;
+}
+
+@media (max-width: 991px) {
+  .stepNumberInactive {
+    white-space: initial;
+  }
+}
+
+.stepLabelsVertical {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-weight: 500;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  width: fit-content;
+  color: rgba(26, 74, 132, 1);
+}
+
+.stepLabel {
+  /* Datos Personales label */
+}
+
+.stepLabelSecurity {
+  align-self: center;
+  margin-top: 191px;
+}
+
+@media (max-width: 991px) {
+  .stepLabelSecurity {
+    margin-top: 40px;
+  }
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 60%;
+  margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+  .rightColumn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.formImage {
+  aspect-ratio: 0.84;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+@media (max-width: 991px) {
+  .formImage {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.copyright {
+  color: rgba(151, 151, 151, 1);
+  font-size: 14px;
+  font-family:
+    "Poppins",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-weight: 600;
+  align-self: end;
+  margin-top: 133px;
+  margin-right: 46px;
+}
+
+@media (max-width: 991px) {
+  .copyright {
+    margin-right: 10px;
+    margin-top: 40px;
+  }
+}
