@@ -64,8 +64,8 @@ function LoginSISOLV2() {
               </span>
             </div>
 
-            <form className={styles.loginForm} onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-              <div className={styles.fieldGroup} style={{ width: '50%' }}>
+            <form className={styles.loginForm} onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '70%' }}>
+              <div className={styles.fieldGroup} style={{ width: '70%' }}>
                 <label className={styles.fieldLabel}>Tipo de documento</label>
                 <div className={styles.selectWrapper} style={{ width: '100%' }}>
                   <select
@@ -85,7 +85,7 @@ function LoginSISOLV2() {
                 </div>
               </div>
 
-              <div className={styles.fieldGroup} style={{ width: '50%' }}>
+              <div className={styles.fieldGroup} style={{ width: '70%' }}>
                 <label className={styles.fieldLabel}>Número de documento</label>
                 <input
                   type="text"
@@ -97,7 +97,7 @@ function LoginSISOLV2() {
                 />
               </div>
 
-              <div className={styles.fieldGroup} style={{ width: '50%' }}>
+              <div className={styles.fieldGroup} style={{ width: '70%' }}>
                 <label className={styles.fieldLabel}>Contraseña</label>
                 <div className={styles.passwordWrapper} style={{ width: '100%' }}>
                   <input
